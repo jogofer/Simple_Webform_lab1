@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+<title>Información Películas</title>
+</head>
+
+<body>
+
+  <script src="p1.js"></script> 
+
+<form action="p1.php" name="formulario" id="miform" onsubmit="return validar()">
+
+  
+  <fieldset>
+    <legend>Datos personales</legend>
+
+    <div>Nombre:<br>
+    <input type="text" name="nombre"> <span><i><b>(Debe empezar por una letra mayúscula)</b></i></span> 
+    </div>
+    
+    <div>Apellidos:<br>
+    <input type="text" name="apellidos"> <span><i><b>(Ambos apellidos deben empezar por letra mayúscula)</b></i></span>
+    </div>
+
+    <div>Nombre de usuario:<br>
+    <input type="text" name="usuario">
+    </div>
+
+    <div>Contraseña:<br>
+    <input type="password" name="password"> <span><i><b>(Debe contener 6 caracteres al menos)</b></i></span>
+    </div>
+
+
+    <div>Número de teléfono:<br>
+    <input type="text" name="telefono" placeholder="ej:611223344"> <span><i><b>(Debe contener al menos 9 digitos y empezar por 9,6 o 7)</b></i></span>
+    </div>
+
+    <div>Fecha de nacimiento:<br>
+    <input type="text" name="fechaNac" placeholder="ej:10-10-1950"> <span><i><b>(El día tiene que estar comprendido entre 1 y 31 y el mes entre 1 y 12)</b></i></span>
+    </div>
+
+    <div>Género:<br>
+    <input type="radio" name="genero" value="hombre"> Hombre<br>
+    <input type="radio" name="genero" value="mujer"> Mujer <br>
+  </div>
+
+    Inserte una imagen de perfil:<br>
+    <input type="file" name="pic" id="pic" accept="image/*">
+
+  </fieldset>
+  <br>
+
+
+<div>Elija su director favorito:
+<select name="director">
+
+  <option value="">Elige un director</option>
+  <option value="tarantino">Quentin Tarantino</option>
+  <option value="francis">Francis Ford Coppola</option>
+  <option value="spielbierg">Steven Spielbierg</option>
+  <option value="hitchcock">Alfred Hitchcock</option>
+  <option value="kubrick">Stanley Kubrick</option>
+  <option value="scorsese">Martin Scorsese</option>
+  <option value="nolan">Cristopher Nolan</option>
+  <option value="lynch">David Lynch</option>
+
+</select>
+<br>
+<br>
+</div>
+
+<div>Seleccione sus géneros cinematográficos favoritos:
+<br>
+
+<input type="checkbox" name="caja1" value="Acción">Acción
+<br>
+<input type="checkbox" name="caja2" value="Animación">Animación
+<br>
+<input type="checkbox" name="caja3" value="Bélico">Bélico
+<br>
+<input type="checkbox" name="caja4" value="Ciencia ficción">Ciencia ficción
+<br>
+<input type="checkbox" name="caja5" value="Comedia">Comedia
+<br>
+<input type="checkbox" name="caja6" value="Drama">Drama
+<br>
+<input type="checkbox" name="caja7" value="Teror">Terror
+<br>
+<input type="checkbox" name="caja8" value="Thriller">Thriller
+<br>
+<input type="checkbox" name="caja9" value="Western">Western
+<br>
+</div>
+
+<input type="button" onclick="seleccionarTodos()" value="Seleccionar todos">
+<input type="button" onclick="borrarTodos()" value="Borrar todos">
+
+<br>
+<br>
+
+<div>Comentarios o sugerencias:
+<br>
+<textarea name="coment" rows="4" cols="50" placeholder="Escriba aquí el texto">
+</textarea>
+</div>
+
+<div>Seleccione el método de envío:
+<br>
+<input type="radio" name="envio" value="get" id="get">GET
+<br>
+<input type="radio" name="envio" value="post" id="post" checked>POST (Por defecto)
+<br>
+<br>
+</div>
+
+<div>Seleccione la codificacion:
+<br>
+<input type="radio" name="codif" id="appl" value="application/x-www-form-urlencoded">application/x-www-form-urlencoded
+<br>
+<input type="radio" name="codif" id="multipart" value="multipart/form-data">multipart/form-data
+<br>
+<br>
+</div>
+
+<div>
+Seleccione la URL a la que va enviar el formulario:
+
+<br>
+<input type="radio" name="url" value="p1.php">p1.php
+<br>
+<input type="radio" name="url" value="http://193.146.210.123/phpinfo.php">http://193.146.210.123/phpinfo.php
+<br>
+<br>
+</div>
+
+
+<input type="hidden" name="hora" id="hora" value="">
+<input type="hidden" name="navegador" id="navegador" value="">
+
+<input type="submit" value="Enviar datos">
+<input type="reset" value="Reestablecer todo">
+
+
+</form>
+
+</body>
+</html>
